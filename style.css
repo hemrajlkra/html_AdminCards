@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Open Sans",sans-serif;
+}
+body{
+    background: url(background-image.jpeg), no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-card{
+    width: 370px ;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px black;
+}
+.top-section{
+    padding: 40px 60px;
+    background-color: rgb(17, 185, 190, 0.5);
+}
+.message,.notification{
+    position: absolute;
+    top: 40px;
+    font-size: 25px;
+    cursor: pointer ;
+    color: #e0e0e050;
+}
+.message{
+    left: 60px;
+}
+.notification{
+    right: 60px;
+}
+.pic{
+    width: 180px;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 20px;
+    border:  2px solid rgb(36, 35, 34);
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+}
+.pic::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #8a838350;
+    animation: wave 1.5s infinite linear;
+    top:0;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+@keyframes wave {
+    to{
+        transform:scale(1.5);
+        opacity: 1;
+    }
+    
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name{
+    font-size: 30px;
+    color: antiquewhite;
+    text-transform: uppercase;
+    font-family: "uchen",sans-serif;
+}
+.tag{
+    font-size: 18px;
+    margin: 4px 0;
+    /* color: #222; */
+    color: rgb(255, 255, 255);
+    
+}
+.bottom-section{
+    padding: 60px 40px;
+    background:#474747fa ;
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    text-transform: uppercase;
+    
+    
+}
+.border{
+    width: 1px;
+    height:20px;
+    background: 474747fa;
+    margin: 0 25px;
+
+}
+.bottom-section span{
+    font-size: 14px;
+    display: block;
+    line-height: 1;
+    font-family: "uchen",sans-serif;
+}
+.social-media{
+    position: absolute;
+    width: 100%;
+    top:-25px;
+    left: 0;
+    z-index: 1;
+}
+.fb{color: #2564b8;}
+.ins{color: #c32aa3;}
+.lin{color: rgb(29, 64, 160);}
+.tw{color: #1da1f2;}
+.social-media i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    margin: 0 10px;
+    position :relative;
+}
+.social-media i::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #222;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.4s  linear ;
+}
+.social-media i:hover::after{
+    transform:scale(1.4);
+    opacity: 0 ;
+}
